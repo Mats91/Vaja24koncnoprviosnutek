@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sporočilo</title>
+</head>
+<body style="background-color:#996666">
+    <h1>Podatki sporočila</h1>
+
+    <p>ID sporočila: {{ sporocilo.key.id() }}</p>
+    <p>Vnos sporočila: {{ sporocilo.vnos }}</p>
+    <p>Datum sporočila: {{ sporocilo.nastanek }}</p>
+    <a href="/sporocilo/{{ sporocilo.key.id() }}/uredi">uredi</a>
+    <br>
+    <a href="/sporocilo/{{ sporocilo.key.id() }}/izbrisi">izbrisi</a>
+</body>
+</html>

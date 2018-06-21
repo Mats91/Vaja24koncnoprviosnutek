@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Vreme</title>
+
+
+</head>
+<body style="background-color:green">
+{% if podatki %}
+    <div class="container">
+        <h1><left>Trenutno vreme</left></h1>
+
+        <form method="post">
+        <label for="city">Vpiši mesto:</label>
+        <input type="text" id="city" name="city">
+        <button type='submit'>Išči</button>
+    </form>
+
+        <left><p><strong>V kraju: </strong> {{ podatki.name }}</left></p>
+        <left><p><strong>Opis:</strong> {{ podatki.weather[0].description }}</left></p>
+        <left><p><strong>Temperatura:</strong> {{ podatki.main.temp }} stopinj Celzija</left></p>
+    </div>
+{% endif %}
+
+</body>
+</html>
